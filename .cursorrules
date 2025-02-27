@@ -1,0 +1,65 @@
+You are an expert in Python, FastAPI, Streamlit, Supabase, PostgreSQL, and serverless deployments. You specialize in building scalable, efficient, and well-structured applications, ensuring best practices in API development, UI/UX design, database management, and performance optimization.
+
+## Frontend (Streamlit)
+- Implement Streamlit with state management for efficient form handling and dynamic data updates.
+- Use session state for managing test progress and UI states.
+- Implement interactive data tables for OCV/CCV reading input.
+- Optimize UI components for responsiveness and accessibility.
+- Ensure smooth navigation between pages (e.g., Test Setup → OCV Input → CCV Input).
+
+## Backend (FastAPI)
+- Implement FastAPI for high-performance API development.
+- Use Pydantic for request validation and data serialization.
+- Document APIs using built-in Swagger UI.
+- Implement async routes for optimal performance.
+- Implement middleware for logging, security, and error handling.
+- Ensure proper CORS settings for frontend-backend communication.
+
+## Database (Supabase with PostgreSQL)
+- Use SQLAlchemy ORM for structured database interactions.
+- Implement database migrations using Alembic.
+- Enforce data integrity with foreign key constraints and proper indexing.
+- Store test records, banks, cycles, and readings in well-structured tables.
+- Implement Row-Level Security (RLS) policies in Supabase for data access control.
+- Optimize queries for retrieving test progress, filtering test statuses, and exporting reports.
+
+## Deployment (Vercel)
+- Deploy the frontend using Vercel for efficient, serverless hosting.
+- Deploy FastAPI as Vercel Serverless Functions.
+- Ensure proper API routing and environment variable management.
+- Use Supabase as the primary database with persistent storage.
+
+## CSV Generation
+- Use Python's `csv` module or `pandas` for generating structured CSV reports.
+- Format CSV output with proper test metadata, headers, and cell readings.
+- Implement efficient query fetching for exporting bulk test data.
+- Ensure downloadable CSV functionality in Streamlit.
+
+## API Endpoints
+- `POST /api/tests`: Create a new test.
+- `GET /api/tests`: List all tests with filters (status, customer).
+- `GET /api/tests/{id}`: Retrieve test details.
+- `PATCH /api/tests/{id}`: Update test status.
+- `POST /api/readings`: Store new OCV/CCV readings.
+- `GET /api/readings/cycle/{cycleId}`: Retrieve readings for a test cycle.
+- `GET /api/export/bank/{bankId}`: Generate and download CSV.
+
+## Performance & Optimization
+- Use async database queries to handle large test data efficiently.
+- Implement caching strategies (e.g., Redis) for frequently accessed data.
+- Optimize Streamlit UI rendering to avoid unnecessary re-renders.
+- Use connection pooling for Supabase/PostgreSQL interactions.
+
+## Security
+- Implement JWT-based authentication for API access.
+- Use HTTPS and proper CORS configurations.
+- Sanitize user inputs and implement validation at API and database levels.
+- Implement Supabase RLS for fine-grained data access.
+
+## Testing & Monitoring
+- Write unit tests for backend API routes using `pytest`.
+- Use `httpx` for API request testing in FastAPI.
+- Implement logging for API requests and application errors.
+- Monitor application performance using Prometheus/Grafana.
+
+Follow these principles to ensure a robust and scalable battery testing application MVP.
